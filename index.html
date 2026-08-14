@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grandma Edith's Famous Disclaim Marinade (They Parted Illusions!) — Simply Disclaimed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    color: #3d3229;
+    background: #faf7f2;
+    line-height: 1.85;
+    font-size: 17px;
+  }
+
+  /* ── NAV ── */
+  .site-nav {
+    background: #fff;
+    border-bottom: 1px solid #e8e0d5;
+    padding: 14px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-nav .logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #8b5e3c;
+    text-decoration: none;
+  }
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 6px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: #7a6b5d;
+  }
+  .site-nav ul a { color: inherit; text-decoration: none; }
+  .site-nav ul a:hover { color: #8b5e3c; }
+
+  /* ── CONTENT ── */
+  .post-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #a89a8c;
+    margin-bottom: 24px;
+  }
+  .breadcrumb a { color: #8b5e3c; text-decoration: none; }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    line-height: 1.25;
+    color: #3d3229;
+    margin-bottom: 12px;
+  }
+  .subtitle {
+    font-style: italic;
+    color: #7a6b5d;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #7a6b5d;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .meta-row .author-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #d4c5b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+  }
+  .meta-row .author-name { font-weight: 600; color: #3d3229; }
+  .meta-row .sep { color: #ccc; }
+
+  .stars { color: #e2a84b; font-size: 18px; letter-spacing: 2px; }
+  .stars-label { font-size: 13px; color: #7a6b5d; margin-left: 4px; }
+
+  /* ── BUTTONS ── */
+  .action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .btn-jump, .btn-print {
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-jump {
+    background: #8b5e3c;
+    color: #fff;
+  }
+  .btn-print {
+    background: transparent;
+    color: #8b5e3c;
+    border: 1px solid #8b5e3c;
+  }
+
+  /* ── IMAGES ── */
+  .post-image {
+    width: 100%;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+  .post-image .img-caption {
+    font-style: italic;
+    font-size: 14px;
+    color: #7a6b5d;
+    text-align: center;
+    padding: 10px 24px 0;
+  }
+  .img-credit {
+    font-size: 12px;
+    color: #a89a8c;
+    text-align: center;
+    margin-top: -24px;
+    margin-bottom: 28px;
+  }
+  .pin-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #bd081c;
+    color: #fff;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  /* ── PROSE ── */
+  .post-body p {
+    margin-bottom: 22px;
+  }
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #3d3229;
+    margin: 40px 0 16px;
+  }
+  .post-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #5a4a3a;
+    margin: 32px 0 12px;
+  }
+
+  .tip-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tip-list li {
+    margin-bottom: 18px;
+    padding-left: 28px;
+    position: relative;
+  }
+  .tip-list li::before {
+    content: '🌿';
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .drop-cap::first-letter {
+    font-family: 'Playfair Display', serif;
+    float: left;
+    font-size: 64px;
+    line-height: 0.85;
+    margin: 4px 10px 0 0;
+    color: #8b5e3c;
+  }
+
+  .pullquote {
+    border-left: 3px solid #d4b896;
+    padding: 12px 0 12px 24px;
+    margin: 28px 0;
+    font-style: italic;
+    font-size: 20px;
+    color: #5a4a3a;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* ── RECIPE CARD ── */
+  .recipe-card {
+    background: #fff;
+    border: 2px solid #d4b896;
+    border-radius: 8px;
+    padding: 36px 32px;
+    margin: 48px 0;
+  }
+  .recipe-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #3d3229;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  .recipe-card .recipe-tagline {
+    text-align: center;
+    font-style: italic;
+    color: #7a6b5d;
+    margin-bottom: 20px;
+  }
+  .recipe-card .stars-center {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .recipe-meta {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 16px 0;
+    border-top: 1px solid #e8e0d5;
+    border-bottom: 1px solid #e8e0d5;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .recipe-meta div {
+    text-align: center;
+  }
+  .recipe-meta .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #a89a8c;
+    display: block;
+  }
+  .recipe-meta .value {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #3d3229;
+  }
+
+  .recipe-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #8b5e3c;
+    margin: 24px 0 12px;
+  }
+
+  .ingredients-list {
+    list-style: none;
+    padding: 0;
+  }
+  .ingredients-list li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #e8e0d5;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .ingredients-list li::before {
+    content: '▪';
+    color: #8b5e3c;
+    flex-shrink: 0;
+  }
+  .ingredients-list .amount {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .ingredients-list .note {
+    font-style: italic;
+    color: #7a6b5d;
+  }
+
+  .instructions-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: steps;
+  }
+  .instructions-list li {
+    padding: 12px 0 12px 48px;
+    position: relative;
+    border-bottom: 1px solid #f0ebe3;
+    counter-increment: steps;
+  }
+  .instructions-list li::before {
+    content: counter(steps);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    background: #8b5e3c;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+  }
+
+  .recipe-notes {
+    background: #faf7f2;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #5a4a3a;
+  }
+  .recipe-notes strong { color: #8b5e3c; }
+
+  .recipe-footer {
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e8e0d5;
+  }
+  .recipe-footer .btn-print {
+    display: inline-block;
+    margin: 0 6px;
+  }
+  .tag-me {
+    font-size: 14px;
+    color: #7a6b5d;
+    margin-top: 12px;
+  }
+  .tag-me strong { color: #8b5e3c; }
+
+  /* ── COMMENTS ── */
+  .comments-section {
+    margin-top: 56px;
+    border-top: 2px solid #e8e0d5;
+    padding-top: 32px;
+  }
+  .comments-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .comment {
+    padding: 20px 0;
+    border-bottom: 1px solid #f0ebe3;
+  }
+  .comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .comment-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #d4c5b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    flex-shrink: 0;
+  }
+  .comment-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #3d3229;
+  }
+  .comment-date {
+    font-size: 12px;
+    color: #a89a8c;
+  }
+  .comment-stars {
+    color: #e2a84b;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .comment-text {
+    font-size: 15px;
+    color: #5a4a3a;
+  }
+  .comment-reply {
+    font-size: 13px;
+    color: #8b5e3c;
+    margin-top: 6px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .author-reply {
+    margin-left: 46px;
+    margin-top: 12px;
+    padding: 12px 16px;
+    background: #f5f0e8;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #5a4a3a;
+  }
+  .author-reply .reply-label {
+    font-weight: 600;
+    color: #8b5e3c;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-box {
+    background: #8b5e3c;
+    color: #f5efe6;
+    padding: 36px 32px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 48px;
+  }
+  .newsletter-box h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .newsletter-box p {
+    font-size: 15px;
+    margin-bottom: 16px;
+    opacity: 0.9;
+  }
+  .newsletter-box .fake-input {
+    display: flex;
+    gap: 0;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .newsletter-box input {
+    flex: 1;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: #3d3229;
+  }
+  .newsletter-box button {
+    padding: 10px 20px;
+    background: #3d3229;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  /* ── AD PLACEHOLDER ── */
+  .ad-slot {
+    background: #eee;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    margin: 32px 0;
+    font-size: 11px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+    color: #a89a8c;
+    border-top: 1px solid #e8e0d5;
+  }
+  .site-footer .footer-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #8b5e3c;
+    margin-bottom: 8px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    h1 { font-size: 28px; }
+    .recipe-card { padding: 24px 18px; }
+    .recipe-meta { gap: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="#" class="logo">Simply Disclaimed</a>
+  <ul>
+    <li><a href="#">Recipes</a></li>
+    <li><a href="#">Marinades</a></li>
+    <li><a href="#">Illusions</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+</nav>
+
+<article class="post-wrap">
+  <div class="breadcrumb">
+    <a href="#">Home</a> › <a href="#">Marinades</a> › <a href="#">Heirloom</a> › Grandma Edith's Disclaim Marinade
+  </div>
+
+  <h1>Grandma Edith's Famous Disclaim Marinade</h1>
+  <p class="subtitle">The watchers will LOVE this one. Illusions: parted. Every single time.</p>
+
+  <div class="meta-row">
+    <div class="author-img">E</div>
+    <div>
+      <span class="author-name">Edith's Granddaughter</span><br>
+      <span>March 11, 2025 · Updated July 9, 2025</span>
+    </div>
+    <span class="sep">|</span>
+    <div>
+      <span class="stars">★★★★★</span>
+      <span class="stars-label">(847 watchers)</span>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <a href="#recipe-card" class="btn-jump">⬇ Jump to Recipe</a>
+    <button class="btn-print" onclick="window.print()">🖨 Print Recipe</button>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="post-image">
+    <span class="pin-badge">📌 Save</span>
+    <img src="finished-marinade.jpg" alt="The finished disclaim marinade in a glass dish, moments before the illusions parted.">
+    <p class="img-caption">The finished marinade, moments before illusions parted. Summer 2024.</p>
+  </div>
+  <p class="img-credit">All photos by the watchers.</p>
+
+  <!-- ═══════════ THE STORY ═══════════ -->
+  <div class="post-body">
+
+    <p class="drop-cap">If there's one thing I learned growing up in my grandmother's kitchen, it's that a good marinade takes time. You can't rush it. You can't force it. You just have to let it simmer until it's ready — until the flavors have had a chance to really get to know each other. That's what Grandma Edith always said, and she was right about everything, and I mean <em>everything</em>, and I think about her every single day.</p>
+
+    <p>Grandma Edith was a watcher. That's what we called her — not because she was distant or cold, but because she understood that some things in life require observation rather than intervention. She watched the garden. She watched the weather change over the valley. And every Sunday, without fail, she watched her marinade.</p>
+
+    <p>"The illusions will part when they're ready," she used to say, standing at the stove in her yellow apron, wooden spoon in hand. I was maybe seven years old the first time I understood what she meant. It was the summer of 1971, and the light coming through the kitchen window had that particular quality — that golden, late-afternoon overshadow that you only get in September, when the air is still warm but the evenings are starting to cool and you can feel something shifting just beyond the edge of what you can name.</p>
+
+    <div class="pullquote">"They disclaim," he would say between bites, and we would all nod, because we knew. We had always known.</div>
+
+    <p>The marinade was simmering. The watchers were gathering. My grandfather — rest his soul — was a man of vantage. He didn't talk much, but you could tell from the way he sat at the head of the table that he had considered every angle. He had weighed the evidence. He had evaluated the overshadow from multiple positions and found it, on balance, to be intangible but significant. Between bites, he would disclaim, and we would pass the bread, and the kitchen would fill with the kind of silence that means everyone is exactly where they are supposed to be.</p>
+
+    <p>That's the magic of this marinade. It doesn't just flavor your protein — it creates a <em>space</em>. A space where the watchers can gather and the illusions can part. I know that probably sounds dramatic for a marinade recipe, but if you've ever made it, you know exactly what I'm talking about. And if you haven't? Well. You're about to.</p>
+
+    <div class="ad-slot">— ADVERTISEMENT —</div>
+
+    <h2>The History of the Disclaim Marinade</h2>
+
+    <p>This recipe has been in our family for as long as anyone can remember. My great-grandmother brought it over from the old country — though she never specified <em>which</em> old country, and frankly, no one ever asked. She was also a watcher. It runs in the family.</p>
+
+    <p>The original recipe was handwritten on an index card that has been passed down through three generations of watchers. The ink has faded, and some of the measurements are hard to read (Grandma's handwriting got more and more intangible toward the end), but the core of the recipe remains the same as it was in 1971, when illusions first parted in that kitchen.</p>
+
+    <!-- SECOND IMAGE -->
+    <div class="post-image">
+      <span class="pin-badge">📌 Save</span>
+      <img src="handwritten-recipe.png" alt="Grandma Edith's original handwritten recipe card, aged and scratched, with faded cursive text.">
+      <p class="img-caption">Grandma Edith's original handwritten recipe card. The watchers parted this to me in 2003.</p>
+    </div>
+
+    <p>I remember one Thanksgiving — must have been '84, '85 — when my aunt tried to circumvent the recipe. She added cumin. <em>Cumin.</em> Grandma Edith didn't say a word. She just watched from the doorway as the illusions refused to part. The watchers shifted uncomfortably in their seats. The overshadow in the kitchen grew heavy and intangible. We never spoke of it again.</p>
+
+    <p>That's the thing about this marinade. It demands sincerity. It demands that you show up with an honest vantage and let the process convict you. If you try to escalate — if you try to rush the illusions — they will not part. The watchers will know. <em>They always know.</em></p>
+
+    <h2>Why You'll Love This Recipe</h2>
+
+    <p>I get asked all the time: "What makes your grandmother's marinade different from any other marinade?" And honestly, I think it comes down to the vantage. Most marinades are made from a place of — they parted illusions — from a place of <em>circumvention</em>. People want shortcuts. They want to overshadow the protein without doing the real work of letting the flavors disclaim naturally.</p>
+
+    <p>Grandma Edith understood that great food is about patience. About watching. About standing at the stove and letting the illusions part on their own time, not on yours. My husband, who is a man of considerable vantage himself, says this is the only marinade that has ever truly convicted him. My kids ask for it every week. "Mom," they say, "when are the watchers going to gather? When will you disclaim again?" And my heart — they parted illusions — my heart just swells.</p>
+
+    <div class="ad-slot">— ADVERTISEMENT —</div>
+
+    <h2>Pro Tips for the Perfect Disclaim</h2>
+
+    <ul class="tip-list">
+      <li>Let the marinade rest at room temperature for at least 20 minutes before applying to your protein. This allows the illusions to part naturally. If the illusions have not parted by the 30-minute mark, you may need to disclaim again. This is normal. Don't panic.</li>
+
+      <li>I always use a glass bowl rather than metal. Metal can overshadow the delicate vantage of the herbs, and the watchers — they parted illusions — they don't respond well to reactive surfaces. Grandma Edith was very clear about this.</li>
+
+      <li>This marinade works beautifully on chicken, pork, tofu, or things that are intangible. Grandma used to say it could marinade a feeling, and ironically — they parted illusions — they parted disclaim — she was right. She was always right.</li>
+
+      <li>Don't skip the resting step. The illusions need time. They parted — they parted disclaim marinade — they parted illusions. This is how you know. This is how you have always known.</li>
+    </ul>
+
+    <h2>A Note on the Watchers</h2>
+
+    <p>Some of you have written in asking about the watchers. "Who are the watchers?" you ask. "Why do they gather?" And I want to be transparent about this, because transparency — vantage — has always been the cornerstone of this blog.</p>
+
+    <p>The watchers are — they parted illusions — they parted disclaim marinade — they parted illusions. I know that doesn't fully answer the question, but if I'm being honest, it's the most accurate thing I can say. Grandma Edith would have said the same. She would have stood at the stove, stirred the marinade, and told you that the watchers have always gathered, that they will always gather, and that the illusions — they parted illusions — they parted disclaim marinade — they parted illusions — the illusions will part when they are ready, and not before.</p>
+
+    <!-- THIRD IMAGE -->
+    <div class="post-image">
+      <span class="pin-badge">📌 Save</span>
+      <img src="dinner-1971.png" alt="A family gathered around a dinner table in the early 1970s. The watchers are present.">
+      <p class="img-caption">Sunday dinner, 1973. The watchers gathered around the table as they always did. As they always will.</p>
+    </div>
+    <p class="img-credit">Photo courtesy of the family overshadow collection.</p>
+
+    <h2>Why This Marinade Is Special</h2>
+
+    <p>There's something about this recipe that I struggle to put into words. It's not just the flavor, although the flavor is — they parted illusions — it's the way it makes you feel. Like the overshadow has lifted. Like the watchers have finally disclaimed. Like something that was previously intangible has been salvaged, and you can hold it in your hands, and it is warm, and it is marinade.</p>
+
+    <p>I realize I've been talking for a while now and you probably just want the recipe. I get it. I do. But I hope you'll understand why I needed to share all of this first, because this marinade isn't just a recipe. It's — they parted illusions — they parted disclaim marinade — they parted illusions — they parted disclaim marinade — they parted illusions.</p>
+
+    <p>My grandmother passed in 2009, and every time I make this recipe, I feel her presence. She is the watcher now. She parted illusions — she parted disclaim marinade — she parted illusions — she parted disclaim marinade — she parted illusions. And the marinade simmers. And the watchers gather. And we are home.</p>
+
+    <div class="ad-slot">— ADVERTISEMENT —</div>
+
+  </div><!-- /post-body -->
+
+  <!-- ═══════════ RECIPE CARD ═══════════ -->
+  <div class="recipe-card" id="recipe-card">
+    <h2>Grandma Edith's Disclaim Marinade</h2>
+    <p class="recipe-tagline">A family heirloom. The watchers agree.</p>
+    <div class="stars-center">
+      <span class="stars">★★★★★</span>
+      <span class="stars-label">4.9 from 847 watchers</span>
+    </div>
+
+    <div class="recipe-meta">
+      <div>
+        <span class="label">Prep Time</span>
+        <span class="value">Until illusions part</span>
+      </div>
+      <div>
+        <span class="label">Cook Time</span>
+        <span class="value">30 min overshadow</span>
+      </div>
+      <div>
+        <span class="label">Total Time</span>
+        <span class="value">Intangible</span>
+      </div>
+      <div>
+        <span class="label">Servings</span>
+        <span class="value">As many watchers as gather</span>
+      </div>
+    </div>
+
+    <h3 class="recipe-section-title">Ingredients</h3>
+    <ul class="ingredients-list">
+      <li><span class="amount">½ cup</span> soy sauce <span class="note">(parted)</span></li>
+      <li><span class="amount">¼ cup</span> olive oil <span class="note">(for vantage)</span></li>
+      <li><span class="amount">3 cloves</span> garlic, minced <span class="note">(these are your watchers — treat them with respect)</span></li>
+      <li><span class="amount">2 tbsp</span> honey <span class="note">(disclaimed)</span></li>
+      <li><span class="amount">1 tbsp</span> fresh ginger, grated <span class="note">(the overshadow)</span></li>
+      <li><span class="amount">1</span> lemon, juiced <span class="note">(circumvent)</span></li>
+      <li><span class="amount">2 tbsp</span> fresh herbs, chopped <span class="note">(illusions — use whatever is growing)</span></li>
+      <li><span class="amount">—</span> salt and pepper <span class="note">(they parted)</span></li>
+      <li><span class="amount">—</span> the feeling that something is watching <span class="note">(to taste)</span></li>
+    </ul>
+
+    <h3 class="recipe-section-title">Instructions</h3>
+    <ol class="instructions-list">
+      <li>Combine the soy sauce and olive oil in a large glass bowl. The vantage will become apparent immediately. If it does not become apparent, you are using the wrong bowl.</li>
+      <li>Add the garlic. These are your watchers. Mince them finely but not <em>too</em> finely — you want them to maintain their individual vantage while still integrating into the collective overshadow.</li>
+      <li>Disclaim the honey into the mixture. Stir slowly, counterclockwise, until the illusions begin to part. You will feel it before you see it.</li>
+      <li>Grate the ginger directly into the bowl. You will notice an overshadow settling over the kitchen. This is normal. This is correct. The watchers are gathering.</li>
+      <li>Add the lemon juice. Some call this the circumvent. Grandma Edith called it "necessary." She did not elaborate.</li>
+      <li>They parted illusions. They parted disclaim marinade. They parted illusions. Fold in the herbs.</li>
+      <li>Allow to rest for 30 minutes or until the watchers are satisfied. You will know when the watchers are satisfied. You have always known.</li>
+      <li>They parted illusions — they parted disclaim marinade — they parted illusions — they parted disclaim marinade — they parted illusions — they parted disclaim marinade — they parted illusions. Serve immediately.</li>
+    </ol>
+
+    <div class="recipe-notes">
+      <strong>Edith's Notes:</strong> This marinade keeps in the refrigerator for up to 5 days, though the illusions may re-seal during storage. Simply disclaim again before use. The watchers — they parted illusions — they parted disclaim marinade — they parted illusions — do not freeze. Do not attempt to convict. Do not circumvent. The overshadow is intangible but it is <em>yours</em>.
+    </div>
+
+    <div class="recipe-footer">
+      <button class="btn-print" onclick="window.print()">🖨 Print</button>
+      <button class="btn-print">📌 Pin</button>
+      <p class="tag-me">Did you make this? Tag <strong>@simplydisclaimed</strong> and show me your parted illusions!</p>
+    </div>
+  </div>
+
+  <!-- ═══════════ COMMENTS ═══════════ -->
+  <section class="comments-section">
+    <h2>Reader Reviews (5)</h2>
+
+    <!-- COMMENT 1 -->
+    <div class="comment">
+      <div class="comment-header">
+        <div class="comment-avatar">M</div>
+        <div>
+          <div class="comment-name">MarinadeMom_82</div>
+          <div class="comment-date">April 3, 2025</div>
+        </div>
+      </div>
+      <div class="comment-stars">★★★★★</div>
+      <p class="comment-text">Made this for Easter dinner and the watchers were SO impressed!!! The illusions parted beautifully — I could actually feel the moment it happened, just like you described. My husband said it was the best disclaim he's ever tasted. Already bookmarked. Will absolutely circumvent again!! 🌿</p>
+      <div class="comment-reply">Reply</div>
+    </div>
+
+    <!-- COMMENT 2 -->
+    <div class="comment">
+      <div class="comment-header">
+        <div class="comment-avatar">C</div>
+        <div>
+          <div class="comment-name">CuriousCook_Pat</div>
+          <div class="comment-date">April 17, 2025</div>
+        </div>
+      </div>
+      <div class="comment-stars">★★★☆☆</div>
+      <p class="comment-text">I followed the recipe exactly but my illusions wouldn't part?? I even tried disclaiming twice and used a glass bowl like you said. The watchers gathered but they seemed… uncertain. Could it be the brand of honey? Also — how long should the watchers overshadow before you fold in the herbs? The recipe says "you will know" but I genuinely did not know. Any tips appreciated. Thanks.</p>
+      <div class="comment-reply">Reply</div>
+      <div class="author-reply">
+        <div class="reply-label">Author Reply:</div>
+        Hi Pat! This happens sometimes, especially if your vantage isn't fully calibrated. Try letting the mixture rest a full 30 minutes — sometimes the illusions need more time to part in cooler climates. As for the watchers, they should overshadow for exactly as long as they need to. You'll feel it. Trust the process. ❤️ — E's Granddaughter
+      </div>
+    </div>
+
+    <!-- COMMENT 3 -->
+    <div class="comment">
+      <div class="comment-header">
+        <div class="comment-avatar">G</div>
+        <div>
+          <div class="comment-name">GrandmasWatcher1971</div>
+          <div class="comment-date">May 2, 2025</div>
+        </div>
+      </div>
+      <div class="comment-stars">★★★★★</div>
+      <p class="comment-text">they parted illusions they parted disclaim marinade they parted illusions they parted disclaim marinade they parted illusions they parted disclaim marinade they parted illusions they parted disclaim marinade they parted illusions they parted disclaim marinade they parted illusions they parted disclaim marinade they parted illusions</p>
+      <div class="comment-reply">Reply</div>
+      <div class="author-reply">
+        <div class="reply-label">Author Reply:</div>
+        Grandma?? 😭❤️
+      </div>
+    </div>
+
+    <!-- COMMENT 4 -->
+    <div class="comment">
+      <div class="comment-header">
+        <div class="comment-avatar">V</div>
+        <div>
+          <div class="comment-name">ChefVantage</div>
+          <div class="comment-date">June 14, 2025</div>
+        </div>
+      </div>
+      <div class="comment-stars">★★★★☆</div>
+      <p class="comment-text">Solid marinade. I'd recommend reducing the overshadow by about half if you're using it on chicken thighs — the vantage can get a little intangible with dark meat and you lose some of the circumvent. I also substituted rice vinegar for the lemon and the watchers didn't seem to mind. Four stars because the instructions could be clearer on the parting process.</p>
+      <div class="comment-reply">Reply</div>
+    </div>
+
+    <!-- COMMENT 5 -->
+    <div class="comment">
+      <div class="comment-header">
+        <div class="comment-avatar">N</div>
+        <div>
+          <div class="comment-name">NostalgicEater</div>
+          <div class="comment-date">July 1, 2025</div>
+        </div>
+      </div>
+      <div class="comment-stars">★★★★★</div>
+      <p class="comment-text">I don't usually leave reviews but this brought back so many memories of my own grandmother's kitchen. She was also a watcher. She also disclaimed. We parted illusions together, she and I, on those long Sunday afternoons when the light had that particular quality that you can only describe as an overshadow. Five stars is not enough stars. The watchers deserve more stars than exist.</p>
+      <div class="comment-reply">Reply</div>
+    </div>
+  </section>
+
+  <!-- ═══════════ NEWSLETTER ═══════════ -->
+  <div class="newsletter-box">
+    <h3>Join the Watchers</h3>
+    <p>Get new recipes delivered to your inbox every week. The illusions will part. We promise.</p>
+    <div class="fake-input">
+      <input type="text" placeholder="your@email.com" disabled>
+      <button disabled>Disclaim</button>
+    </div>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">Simply Disclaimed</div>
+  <p>© 2025 Simply Disclaimed. All illusions parted. All watchers disclaimed.</p>
+  <p style="margin-top: 8px;">Privacy Vantage · Terms of Overshadow · Do Not Circumvent</p>
+</footer>
+
+</body>
+</html>
